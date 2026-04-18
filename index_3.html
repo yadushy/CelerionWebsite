@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Celerion Health — AI for Clinical Decision Making</title>
+<meta name="description" content="Celerion builds AI tools that help doctors, nurses and emergency healthcare teams make better decisions. Empowering Medicine through Artificial Intelligence Innovations.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Syne:wght@700;800&display=swap" rel="stylesheet">
+<style>
+/* Shared styles */
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+html{scroll-behavior:smooth;}
+body{font-family:'Inter',sans-serif;background:#fff;color:#111827;overflow-x:hidden;}
+nav{position:sticky;top:0;z-index:100;background:rgba(255,255,255,0.95);backdrop-filter:blur(12px);border-bottom:1px solid #e5e7eb;padding:0 48px;}
+.nav-inner{max-width:1200px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;height:68px;}
+.nav-logo{display:flex;align-items:center;gap:10px;text-decoration:none;}
+.nav-logo svg{width:32px;height:32px;}
+.nav-brand{display:flex;flex-direction:column;gap:1px;}
+.nav-brand-name{font-size:13px;font-weight:700;letter-spacing:2.5px;color:#1A2B5E;}
+.nav-brand-sub{font-size:7px;font-weight:600;letter-spacing:3px;color:#00C4B4;}
+.nav-links{display:flex;align-items:center;gap:32px;list-style:none;}
+.nav-links a{font-size:14px;color:#6b7280;text-decoration:none;transition:color .2s;}
+.nav-links a:hover{color:#111827;}
+.nav-links a.active{color:#1A2B5E;font-weight:500;}
+.nav-cta{background:#1A2B5E!important;color:#fff!important;font-weight:600!important;padding:10px 22px!important;border-radius:8px;transition:background .2s!important;}
+.nav-cta:hover{background:#142248!important;}
+footer{background:#1A2B5E;padding:56px 48px 40px;}
+.footer-inner{max-width:1200px;margin:0 auto;}
+.footer-top{display:flex;justify-content:space-between;align-items:flex-start;flex-wrap:wrap;gap:40px;padding-bottom:40px;border-bottom:1px solid rgba(255,255,255,0.08);}
+.footer-brand-name{font-size:14px;font-weight:700;letter-spacing:2.5px;color:#fff;margin-bottom:6px;}
+.footer-brand-name span{color:#00C4B4;}
+.footer-brand-tag{font-size:12px;color:rgba(255,255,255,0.3);}
+.footer-links{display:flex;gap:28px;flex-wrap:wrap;}
+.footer-links a{font-size:13px;color:rgba(255,255,255,0.5);text-decoration:none;transition:color .2s;}
+.footer-links a:hover{color:#fff;}
+.footer-bottom{display:flex;justify-content:space-between;align-items:center;padding-top:28px;flex-wrap:wrap;gap:16px;}
+.footer-disc{font-size:11px;color:rgba(255,255,255,0.2);font-style:italic;max-width:520px;line-height:1.65;}
+.footer-copy{font-size:12px;color:rgba(255,255,255,0.22);}
+.btn{display:inline-flex;align-items:center;gap:8px;background:#1A2B5E;color:#fff;font-size:14px;font-weight:600;padding:14px 28px;border-radius:10px;text-decoration:none;transition:background .2s,transform .2s;letter-spacing:0.02em;}
+.btn:hover{background:#142248;transform:translateY(-1px);}
+.btn-teal{background:#00C4B4;}
+.btn-teal:hover{background:#00A99C;}
+.btn-outline{background:transparent;color:#1A2B5E;border:1.5px solid #1A2B5E;}
+.btn-outline:hover{background:#1A2B5E;color:#fff;transform:translateY(-1px);}
+.eyebrow{font-size:11px;font-weight:600;letter-spacing:3px;color:#00C4B4;text-transform:uppercase;margin-bottom:16px;}
+.container{max-width:1200px;margin:0 auto;padding:0 48px;}
+@media(max-width:900px){
+  nav{padding:0 20px;}
+  .nav-links{display:none;}
+  footer{padding:40px 20px;}
+  .container{padding:0 20px;}
+  .footer-top{flex-direction:column;gap:24px;}
+}
+</style>
+<style>
+  body::before{content:'';position:fixed;inset:0;background-image:linear-gradient(rgba(0,196,180,.03) 1px,transparent 1px),linear-gradient(90deg,rgba(0,196,180,.03) 1px,transparent 1px);background-size:64px 64px;pointer-events:none;z-index:0;}
+
+  /* HERO */
+  #hero{display:grid;grid-template-columns:1fr 1fr;min-height:calc(100vh - 68px);position:relative;z-index:1;}
+  .hero-text{display:flex;flex-direction:column;justify-content:center;padding:80px 60px 80px 80px;}
+  .hero-title{font-size:clamp(30px,3.2vw,50px);font-weight:700;color:#1A2B5E;line-height:1.15;letter-spacing:-.01em;margin-bottom:20px;}
+  .hero-tagline{font-size:15px;color:#6b7280;margin-bottom:36px;line-height:1.6;}
+  .hero-buttons{display:flex;gap:14px;flex-wrap:wrap;}
+  .btn-hero-solid{display:inline-flex;align-items:center;background:#00C4B4;color:#fff;font-size:14px;font-weight:600;padding:13px 28px;border-radius:100px;text-decoration:none;transition:background .2s;}
+  .btn-hero-solid:hover{background:#00A99C;}
+  .btn-hero-outline{display:inline-flex;align-items:center;background:transparent;color:#1A2B5E;font-size:14px;font-weight:500;padding:12px 26px;border-radius:100px;border:1.5px solid #1A2B5E;text-decoration:none;transition:all .2s;}
+  .btn-hero-outline:hover{background:#1A2B5E;color:#fff;}
+  .hero-image{overflow:hidden;}
+  .hero-image img{width:100%;height:100%;object-fit:cover;object-position:center top;}
+
+  /* MISSION */
+  #mission{position:relative;z-index:1;background:#F4F8FC;border-top:1px solid #e5e7eb;border-bottom:1px solid #e5e7eb;padding:100px 0;}
+  .mission-quote{font-family:'Syne',sans-serif;font-size:clamp(20px,2.5vw,32px);font-weight:700;line-height:1.45;color:#1A2B5E;margin-bottom:24px;max-width:700px;}
+  .mission-quote .hl{color:#00C4B4;}
+  .mission-body{font-size:17px;font-weight:300;color:#6b7280;line-height:1.8;max-width:580px;}
+
+  /* PLATFORM */
+  #platform{position:relative;z-index:1;padding:100px 0;}
+  .sec-title{font-family:'Syne',sans-serif;font-weight:700;font-size:clamp(26px,3vw,44px);line-height:1.15;letter-spacing:-.01em;color:#1A2B5E;margin-bottom:16px;max-width:560px;}
+  .sec-sub{font-size:16px;font-weight:300;color:#9ca3af;line-height:1.75;max-width:500px;margin-bottom:64px;}
+  .pillars{display:grid;grid-template-columns:repeat(3,1fr);gap:2px;}
+  .pillar{position:relative;background:#fff;border:1px solid #e5e7eb;padding:48px 36px;overflow:hidden;transition:background .3s;}
+  .pillar:hover{background:#F4F8FC;}
+  .pillar-bar{position:absolute;top:0;left:0;width:100%;height:2px;background:#00C4B4;transform:scaleX(0);transform-origin:left;transition:transform .4s ease;}
+  .pillar:hover .pillar-bar{transform:scaleX(1);}
+  .pillar-num{font-size:11px;font-weight:700;letter-spacing:3px;color:#00C4B4;margin-bottom:24px;display:block;}
+  .pillar-title{font-family:'Syne',sans-serif;font-size:20px;font-weight:700;color:#1A2B5E;margin-bottom:12px;}
+  .pillar-desc{font-size:15px;font-weight:300;color:#6b7280;line-height:1.75;}
+
+  /* PRODUCTS PREVIEW */
+  #products{position:relative;z-index:1;background:#F4F8FC;padding:100px 0;}
+  .products-grid{display:grid;grid-template-columns:1fr 1fr;gap:20px;}
+  .prod-card{background:#fff;border:1px solid #e5e7eb;border-radius:16px;padding:44px;transition:border-color .3s,transform .3s;}
+  .prod-card:hover{border-color:#00C4B4;transform:translateY(-3px);}
+  .prod-card.dim{opacity:.5;}
+  .prod-card.dim:hover{transform:none;border-color:#e5e7eb;}
+  .prod-tag{display:inline-block;font-size:10px;font-weight:600;letter-spacing:2px;color:#00C4B4;text-transform:uppercase;margin-bottom:16px;}
+  .prod-tag.soon{color:#9ca3af;background:#f3f4f6;padding:4px 10px;border-radius:100px;}
+  .prod-title{font-family:'Syne',sans-serif;font-size:22px;font-weight:700;color:#1A2B5E;margin-bottom:12px;}
+  .prod-desc{font-size:15px;font-weight:300;color:#6b7280;line-height:1.75;}
+
+  /* VALUES */
+  #values{position:relative;z-index:1;padding:100px 0;}
+  .values-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:2px;margin-top:64px;}
+  .value{padding:40px 28px;border:1px solid #e5e7eb;background:#fff;}
+  .value-num{font-family:'Syne',sans-serif;font-size:42px;font-weight:800;color:rgba(0,196,180,.15);line-height:1;margin-bottom:18px;}
+  .value-title{font-family:'Syne',sans-serif;font-size:15px;font-weight:700;color:#1A2B5E;margin-bottom:8px;}
+  .value-desc{font-size:13px;font-weight:300;color:#9ca3af;line-height:1.7;}
+
+  /* CTA */
+  #cta{position:relative;z-index:1;background:#1A2B5E;padding:120px 0;text-align:center;}
+  .cta-glow{position:absolute;inset:0;background:radial-gradient(ellipse at center,rgba(0,196,180,.1) 0%,transparent 70%);pointer-events:none;}
+  .cta-title{font-family:'Syne',sans-serif;font-weight:800;font-size:clamp(30px,4vw,56px);line-height:1.1;letter-spacing:-.02em;color:#fff;margin-bottom:20px;}
+  .cta-sub{font-size:17px;font-weight:300;color:rgba(255,255,255,.5);margin-bottom:48px;line-height:1.7;max-width:520px;margin-left:auto;margin-right:auto;}
+  .cta-form{display:flex;gap:12px;max-width:420px;margin:0 auto;}
+  .cta-input{flex:1;background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.12);border-radius:10px;padding:15px 18px;color:#fff;font-family:'Inter',sans-serif;font-size:15px;outline:none;transition:border-color .2s;}
+  .cta-input::placeholder{color:rgba(255,255,255,.25);}
+  .cta-input:focus{border-color:#00C4B4;}
+  .cta-btn{background:#00C4B4;color:#fff;border:none;border-radius:10px;padding:15px 24px;font-family:'Inter',sans-serif;font-weight:600;font-size:13px;cursor:pointer;letter-spacing:.05em;transition:background .2s;white-space:nowrap;}
+  .cta-btn:hover{background:#00A99C;}
+  #form-msg{margin-top:16px;font-size:13px;color:#00C4B4;display:none;}
+
+  @keyframes blink{0%,100%{opacity:1;transform:scale(1);}50%{opacity:.4;transform:scale(.8);}}
+
+  @media(max-width:900px){
+    #hero{grid-template-columns:1fr;min-height:auto;}
+    .hero-text{padding:56px 20px;}
+    .hero-image{min-height:320px;}
+    #mission,#platform,#products,#values,#cta{padding:64px 0;}
+    .pillars{grid-template-columns:1fr;}
+    .products-grid{grid-template-columns:1fr;}
+    .values-grid{grid-template-columns:1fr 1fr;}
+    .cta-form{flex-direction:column;}
+  }
+  @media(max-width:540px){.values-grid{grid-template-columns:1fr;}}
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="nav-inner">
+    <a href="index.html" class="nav-logo">
+      <svg viewBox="0 0 34 34" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <polygon points="8.5,0 25.5,0 34,17 25.5,34 8.5,34 0,17" fill="#1A2B5E"/>
+        <polygon points="17,0 25.5,0 34,17 25.5,34 17,34" fill="#00C4B4"/>
+        <line x1="17" y1="0" x2="17" y2="34" stroke="white" stroke-width="1.5"/>
+        <polygon points="6,17 17,6 17,28" fill="white"/>
+      </svg>
+      <div class="nav-brand">
+        <span class="nav-brand-name">CELERION</span>
+        <span class="nav-brand-sub">HEALTH</span>
+      </div>
+    </a>
+    <ul class="nav-links">
+      <li><a href="index.html" class="active">Home</a></li>
+      <li><a href="products.html">Products</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="contact.html" class="nav-cta">Contact</a></li>
+    </ul>
+  </div>
+</nav>
+
+<section id="hero">
+  <div class="hero-text">
+    <h1 class="hero-title">Discover Next-Generation Healthcare Technology with Celerion Health</h1>
+    <p class="hero-tagline">Empowering Medicine through Artificial Intelligence Innovations</p>
+    <div class="hero-buttons">
+      <a href="about.html" class="btn-hero-solid">Learn More</a>
+      <a href="contact.html" class="btn-hero-outline">Join Our Mailing List</a>
+    </div>
+  </div>
+  <div class="hero-image">
+    <img src="hero.webp" alt="Healthcare professional">
+  </div>
+</section>
+
+<section id="mission">
+  <div class="container">
+    <p class="eyebrow">Our mission</p>
+    <p class="mission-quote">Every day, healthcare teams across India make critical decisions under pressure — with limited time, high workloads and incomplete information.<br><span class="hl">We build AI that makes those decisions faster, safer and better.</span></p>
+    <p class="mission-body">Celerion is an AI health company building a suite of clinical decision support tools for doctors, nurses and all emergency healthcare staff across India. Our tools are designed to work alongside people — not replace them.</p>
+  </div>
+</section>
+
+<section id="platform">
+  <div class="container">
+    <p class="eyebrow">The platform</p>
+    <h2 class="sec-title">One platform. Many tools.</h2>
+    <p class="sec-sub">A growing suite of AI-powered tools, each designed to reduce cognitive load, improve accuracy and support better decisions.</p>
+    <div class="pillars">
+      <div class="pillar"><div class="pillar-bar"></div><span class="pillar-num">01</span><div class="pillar-title">Clinical intelligence</div><p class="pillar-desc">AI that understands clinical context — disease patterns, urgency and risk — tailored to the realities of Indian healthcare.</p></div>
+      <div class="pillar"><div class="pillar-bar"></div><span class="pillar-num">02</span><div class="pillar-title">Designed for speed</div><p class="pillar-desc">Minimal inputs, instant outputs. Built for nurses, doctors and support staff on the floor — not administrators at a desk.</p></div>
+      <div class="pillar"><div class="pillar-bar"></div><span class="pillar-num">03</span><div class="pillar-title">Secure by default</div><p class="pillar-desc">Patient data stays on device. No external storage. Security and privacy built into every product from day one.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="products">
+  <div class="container">
+    <p class="eyebrow">Products</p>
+    <h2 class="sec-title">Tools built around clinical workflows</h2>
+    <p class="sec-sub">Each product addresses a specific point of clinical need. More tools in development.</p>
+    <div class="products-grid">
+      <div class="prod-card">
+        <div class="prod-tag">Early access · Live</div>
+        <div class="prod-title">Emergency Triage Support</div>
+        <p class="prod-desc">AI-assisted triage for emergency departments. Supports clinical teams in rapidly assessing patient urgency and next steps — optimised for India's disease landscape.</p>
+        <br>
+        <a href="products.html" class="btn" style="margin-top:8px;">Learn more &rarr;</a>
+      </div>
+      <div class="prod-card dim">
+        <div class="prod-tag soon">Coming soon</div>
+        <div class="prod-title">Clinical Decision Support Suite</div>
+        <p class="prod-desc">A broader suite of CDS tools across multiple specialties and clinical settings. Get in touch to be notified when new products launch.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="values">
+  <div class="container">
+    <p class="eyebrow">What we believe</p>
+    <h2 class="sec-title">Built on clear principles</h2>
+    <div class="values-grid">
+      <div class="value"><div class="value-num">01</div><div class="value-title">AI assists, clinicians decide</div><p class="value-desc">Our tools reduce cognitive load and support better judgement. The final decision always belongs to the care team.</p></div>
+      <div class="value"><div class="value-num">02</div><div class="value-title">India-first</div><p class="value-desc">Built for the diseases, conditions and healthcare contexts that matter most in India.</p></div>
+      <div class="value"><div class="value-num">03</div><div class="value-title">Speed without compromise</div><p class="value-desc">Clinical AI is only useful if it keeps up with clinical reality. Our tools are fast by design.</p></div>
+      <div class="value"><div class="value-num">04</div><div class="value-title">Privacy as standard</div><p class="value-desc">Patient data is never an afterthought. Privacy is built into every product from day one.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="cta">
+  <div class="cta-glow"></div>
+  <div class="container" style="position:relative;z-index:1;">
+    <p class="eyebrow" style="text-align:center;color:#00C4B4;">Early access</p>
+    <h2 class="cta-title">Work with us</h2>
+    <p class="cta-sub">We are working with a small number of hospitals and clinical teams in India. If you're interested in early access or a partnership, get in touch.</p>
+    <form class="cta-form" onsubmit="handleSubmit(event)">
+      <input type="email" id="email-field" class="cta-input" placeholder="your@hospital.com" required>
+      <button type="submit" class="cta-btn">JOIN WAITLIST</button>
+    </form>
+    <p id="form-msg">&#10003; &nbsp;Thank you — we'll be in touch soon.</p>
+  </div>
+</section>
+
+<footer>
+  <div class="footer-inner">
+    <div class="footer-top">
+      <div>
+        <div class="footer-brand-name">CELERION <span>HEALTH</span></div>
+        <div class="footer-brand-tag">Clinical AI · India · celerion.ai</div>
+      </div>
+      <div class="footer-links">
+        <a href="index.html">Home</a>
+        <a href="products.html">Products</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="footer-disc">Celerion's tools are clinical decision support aids. All outputs are for informational purposes only. Clinical decisions must always be made by qualified medical professionals.</div>
+      <div class="footer-copy">&copy; 2026 Celerion Health</div>
+    </div>
+  </div>
+</footer>
+
+<script>
+  function handleSubmit(e) {
+    e.preventDefault();
+    document.getElementById('email-field').value='';
+    const m=document.getElementById('form-msg');
+    m.style.display='block';
+    setTimeout(()=>{m.style.display='none';},5000);
+  }
+</script>
+</body>
+</html>
