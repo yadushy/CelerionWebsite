@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Products — Celerion Health</title>
+<meta name="description" content="AI tools built around clinical workflows. Celerion Health clinical decision support products for Indian healthcare.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Syne:wght@700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="shared.css">
+<style>
+  .page-hero{background:#F4F8FC;padding:80px 0 72px;border-bottom:1px solid #e5e7eb;}
+  .page-title{font-family:'Syne',sans-serif;font-weight:700;font-size:clamp(28px,3.5vw,48px);line-height:1.15;color:#1A2B5E;margin-bottom:14px;max-width:560px;}
+  .page-sub{font-size:16px;font-weight:300;color:#6b7280;line-height:1.7;max-width:500px;}
+
+  main{padding:72px 0;}
+
+  .section-label{font-size:11px;font-weight:600;letter-spacing:3px;color:#00C4B4;text-transform:uppercase;margin-bottom:24px;}
+  .section-label.muted{color:#9ca3af;}
+
+  .product-card{background:#fff;border:1px solid #e5e7eb;border-radius:16px;padding:52px;margin-bottom:64px;}
+  .product-badge{display:inline-block;background:#e6faf8;color:#0a7a6e;font-size:11px;font-weight:600;letter-spacing:1.5px;padding:5px 14px;border-radius:100px;text-transform:uppercase;margin-bottom:22px;}
+  .product-title{font-family:'Syne',sans-serif;font-size:30px;font-weight:700;color:#1A2B5E;margin-bottom:14px;line-height:1.2;}
+  .product-desc{font-size:16px;color:#6b7280;line-height:1.8;max-width:680px;margin-bottom:32px;}
+  .product-tags{display:flex;flex-wrap:wrap;gap:10px;margin-bottom:36px;}
+  .tag{background:#F4F8FC;border:1px solid #d1dde8;color:#1A2B5E;font-size:13px;padding:7px 16px;border-radius:100px;}
+
+  .coming-grid{display:grid;grid-template-columns:1fr 1fr 1fr;gap:16px;margin-bottom:64px;}
+  .coming-card{background:#fff;border:1px solid #e5e7eb;border-radius:14px;padding:32px;opacity:.55;}
+  .coming-badge{display:inline-block;background:#f3f4f6;color:#9ca3af;font-size:10px;font-weight:600;letter-spacing:1.5px;padding:4px 10px;border-radius:100px;text-transform:uppercase;margin-bottom:18px;}
+  .coming-title{font-family:'Syne',sans-serif;font-size:20px;font-weight:700;color:#1A2B5E;margin-bottom:10px;}
+  .coming-desc{font-size:14px;color:#9ca3af;line-height:1.7;}
+  .partner-card{background:#F4F8FC;border:1px solid #d1dde8;border-radius:14px;padding:32px;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;}
+  .partner-title{font-size:14px;font-weight:500;color:#1A2B5E;margin-bottom:10px;}
+  .partner-sub{font-size:13px;color:#9ca3af;line-height:1.6;margin-bottom:16px;}
+  .partner-link{font-size:13px;font-weight:600;color:#00C4B4;text-decoration:none;}
+  .partner-link:hover{color:#00A99C;}
+
+  .disclaimer{border-top:1px solid #e5e7eb;padding:32px 0;font-size:11px;color:#d1d5db;font-style:italic;max-width:560px;}
+
+  @media(max-width:900px){
+    .page-hero{padding:56px 0;}
+    main{padding:48px 0;}
+    .product-card{padding:32px 24px;}
+    .coming-grid{grid-template-columns:1fr;}
+  }
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="nav-inner">
+    <a href="index.html" class="nav-logo">
+      <svg viewBox="0 0 34 34" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <polygon points="8.5,0 25.5,0 34,17 25.5,34 8.5,34 0,17" fill="#1A2B5E"/>
+        <polygon points="17,0 25.5,0 34,17 25.5,34 17,34" fill="#00C4B4"/>
+        <line x1="17" y1="0" x2="17" y2="34" stroke="white" stroke-width="1.5"/>
+        <polygon points="6,17 17,6 17,28" fill="white"/>
+      </svg>
+      <div class="nav-brand">
+        <span class="nav-brand-name">CELERION</span>
+        <span class="nav-brand-sub">HEALTH</span>
+      </div>
+    </a>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="products.html" class="active">Products</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="contact.html" class="nav-cta">Contact</a></li>
+    </ul>
+  </div>
+</nav>
+
+<div class="page-hero">
+  <div class="container">
+    <p class="eyebrow">Our Products</p>
+    <h1 class="page-title">AI tools built around clinical workflows</h1>
+    <p class="page-sub">Each product addresses a specific point of clinical need. More tools in development.</p>
+  </div>
+</div>
+
+<main>
+  <div class="container">
+
+    <div class="section-label">Available now</div>
+    <div class="product-card">
+      <div class="product-badge">Early Access · Live</div>
+      <div class="product-title">Emergency Triage Support</div>
+      <p class="product-desc">AI-assisted triage for emergency departments. Supports doctors, nurses and emergency healthcare teams in rapidly assessing patient urgency and determining next steps — optimised for India's disease landscape and healthcare environment.</p>
+      <div class="product-tags">
+        <span class="tag">Emergency departments</span>
+        <span class="tag">Doctors &amp; nurses</span>
+        <span class="tag">iOS app</span>
+        <span class="tag">India-optimised</span>
+      </div>
+      <a href="contact.html" class="btn">Request early access &rarr;</a>
+    </div>
+
+    <div class="section-label muted">In development</div>
+    <div class="coming-grid">
+      <div class="coming-card">
+        <div class="coming-badge">Coming soon</div>
+        <div class="coming-title">CDS Suite</div>
+        <p class="coming-desc">A broader suite of clinical decision support tools across multiple specialties and clinical settings.</p>
+      </div>
+      <div class="coming-card">
+        <div class="coming-badge">Coming soon</div>
+        <div class="coming-title">More tools</div>
+        <p class="coming-desc">Additional AI-powered tools for clinical teams. Get in touch to be notified when new products launch.</p>
+      </div>
+      <div class="partner-card">
+        <div class="partner-title">Interested in a partnership?</div>
+        <p class="partner-sub">We work with hospitals and clinical teams across India.</p>
+        <a href="contact.html" class="partner-link">Get in touch &rarr;</a>
+      </div>
+    </div>
+
+    <div class="disclaimer">Celerion's tools are clinical decision support aids. All outputs are for informational purposes only. Clinical decisions must always be made by qualified medical professionals.</div>
+
+  </div>
+</main>
+
+<footer>
+  <div class="footer-inner">
+    <div class="footer-top">
+      <div>
+        <div class="footer-brand-name">CELERION <span>HEALTH</span></div>
+        <div class="footer-brand-tag">Clinical AI · India · celerion.ai</div>
+      </div>
+      <div class="footer-links">
+        <a href="index.html">Home</a>
+        <a href="products.html">Products</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="footer-disc">Celerion's tools are clinical decision support aids. All outputs are for informational purposes only. Clinical decisions must always be made by qualified medical professionals.</div>
+      <div class="footer-copy">&copy; 2026 Celerion Health</div>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>

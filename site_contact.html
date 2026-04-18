@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact — Celerion Health</title>
+<meta name="description" content="Get in touch with Celerion Health. Partner with us or request early access to our clinical AI tools.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Syne:wght@700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="shared.css">
+<style>
+  .page-hero{background:#F4F8FC;padding:80px 0 72px;border-bottom:1px solid #e5e7eb;}
+  .page-title{font-family:'Syne',sans-serif;font-weight:700;font-size:clamp(28px,3.5vw,48px);line-height:1.15;color:#1A2B5E;margin-bottom:14px;max-width:560px;}
+  .page-sub{font-size:16px;font-weight:300;color:#6b7280;line-height:1.7;max-width:500px;}
+
+  main{padding:80px 0;}
+  .contact-grid{display:grid;grid-template-columns:1fr 1.6fr;gap:80px;align-items:start;}
+
+  .contact-info h2{font-family:'Syne',sans-serif;font-size:22px;font-weight:700;color:#1A2B5E;margin-bottom:20px;}
+  .contact-info p{font-size:15px;font-weight:300;color:#6b7280;line-height:1.8;margin-bottom:32px;}
+  .contact-detail{display:flex;flex-direction:column;gap:16px;}
+  .contact-item{display:flex;align-items:center;gap:12px;}
+  .contact-item-icon{width:36px;height:36px;background:#F4F8FC;border:1px solid #e5e7eb;border-radius:8px;display:flex;align-items:center;justify-content:center;flex-shrink:0;}
+  .contact-item-icon svg{width:16px;height:16px;}
+  .contact-item-label{font-size:11px;font-weight:600;letter-spacing:1px;color:#9ca3af;text-transform:uppercase;margin-bottom:2px;}
+  .contact-item-val{font-size:14px;color:#1A2B5E;font-weight:500;}
+
+  .contact-form{background:#fff;border:1px solid #e5e7eb;border-radius:16px;padding:48px;}
+  .form-group{margin-bottom:22px;}
+  .form-label{display:block;font-size:13px;font-weight:500;color:#374151;margin-bottom:8px;}
+  .form-input{width:100%;padding:13px 16px;border:1px solid #e5e7eb;border-radius:10px;font-family:'Inter',sans-serif;font-size:15px;color:#111827;outline:none;transition:border-color .2s;background:#fff;}
+  .form-input:focus{border-color:#00C4B4;box-shadow:0 0 0 3px rgba(0,196,180,.08);}
+  .form-input::placeholder{color:#9ca3af;}
+  textarea.form-input{resize:vertical;min-height:140px;}
+  .form-row{display:grid;grid-template-columns:1fr 1fr;gap:16px;}
+  .submit-btn{width:100%;background:#1A2B5E;color:#fff;border:none;border-radius:10px;padding:16px;font-family:'Inter',sans-serif;font-weight:600;font-size:15px;cursor:pointer;transition:background .2s,transform .2s;margin-top:8px;}
+  .submit-btn:hover{background:#142248;transform:translateY(-1px);}
+  #contact-success{margin-top:16px;font-size:14px;color:#00C4B4;text-align:center;display:none;}
+
+  @media(max-width:900px){
+    .page-hero{padding:56px 0;}
+    main{padding:56px 0;}
+    .contact-grid{grid-template-columns:1fr;gap:48px;}
+    .contact-form{padding:32px 24px;}
+    .form-row{grid-template-columns:1fr;}
+  }
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="nav-inner">
+    <a href="index.html" class="nav-logo">
+      <svg viewBox="0 0 34 34" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <polygon points="8.5,0 25.5,0 34,17 25.5,34 8.5,34 0,17" fill="#1A2B5E"/>
+        <polygon points="17,0 25.5,0 34,17 25.5,34 17,34" fill="#00C4B4"/>
+        <line x1="17" y1="0" x2="17" y2="34" stroke="white" stroke-width="1.5"/>
+        <polygon points="6,17 17,6 17,28" fill="white"/>
+      </svg>
+      <div class="nav-brand">
+        <span class="nav-brand-name">CELERION</span>
+        <span class="nav-brand-sub">HEALTH</span>
+      </div>
+    </a>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="products.html">Products</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="contact.html" class="active nav-cta">Contact</a></li>
+    </ul>
+  </div>
+</nav>
+
+<div class="page-hero">
+  <div class="container">
+    <p class="eyebrow">Get in touch</p>
+    <h1 class="page-title">Get in Touch with Celerion Health</h1>
+    <p class="page-sub">We'd love to hear from you. Reach out to explore a partnership or early access.</p>
+  </div>
+</div>
+
+<main>
+  <div class="container">
+    <div class="contact-grid">
+
+      <div class="contact-info">
+        <h2>We're working with hospitals across India</h2>
+        <p>Whether you're interested in early access to our triage tool, a broader partnership, or just want to learn more about what we're building — we'd love to talk.</p>
+        <div class="contact-detail">
+          <div class="contact-item">
+            <div class="contact-item-icon">
+              <svg fill="none" stroke="#1A2B5E" stroke-width="2" viewBox="0 0 24 24"><path d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
+            </div>
+            <div>
+              <div class="contact-item-label">Email</div>
+              <div class="contact-item-val">info@celerion.ai</div>
+            </div>
+          </div>
+          <div class="contact-item">
+            <div class="contact-item-icon">
+              <svg fill="none" stroke="#1A2B5E" stroke-width="2" viewBox="0 0 24 24"><path d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+            </div>
+            <div>
+              <div class="contact-item-label">Location</div>
+              <div class="contact-item-val">India</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="contact-form">
+        <form onsubmit="handleContactSubmit(event)">
+          <div class="form-row">
+            <div class="form-group">
+              <label class="form-label">Your name</label>
+              <input type="text" class="form-input" placeholder="Your full name" required>
+            </div>
+            <div class="form-group">
+              <label class="form-label">Your email</label>
+              <input type="email" class="form-input" placeholder="Your email address" required>
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="form-label">Organisation</label>
+            <input type="text" class="form-input" placeholder="Hospital or organisation name">
+          </div>
+          <div class="form-group">
+            <label class="form-label">Your message</label>
+            <textarea class="form-input" placeholder="How can we help?"></textarea>
+          </div>
+          <button type="submit" class="submit-btn">Send Message</button>
+          <p id="contact-success">&#10003; &nbsp;Thank you — we'll be in touch soon.</p>
+        </form>
+      </div>
+
+    </div>
+  </div>
+</main>
+
+<footer>
+  <div class="footer-inner">
+    <div class="footer-top">
+      <div>
+        <div class="footer-brand-name">CELERION <span>HEALTH</span></div>
+        <div class="footer-brand-tag">Clinical AI · India · celerion.ai</div>
+      </div>
+      <div class="footer-links">
+        <a href="index.html">Home</a>
+        <a href="products.html">Products</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="footer-disc">Celerion's tools are clinical decision support aids. All outputs are for informational purposes only. Clinical decisions must always be made by qualified medical professionals.</div>
+      <div class="footer-copy">&copy; 2026 Celerion Health</div>
+    </div>
+  </div>
+</footer>
+
+<script>
+  function handleContactSubmit(e) {
+    e.preventDefault();
+    e.target.reset();
+    const m = document.getElementById('contact-success');
+    m.style.display = 'block';
+    setTimeout(() => { m.style.display = 'none'; }, 5000);
+  }
+</script>
+</body>
+</html>

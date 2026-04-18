@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>About — Celerion Health</title>
+<meta name="description" content="Celerion Health is an AI company building clinical decision support tools for healthcare teams across India.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Syne:wght@700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="shared.css">
+<style>
+  .page-hero{background:#F4F8FC;padding:80px 0 72px;border-bottom:1px solid #e5e7eb;}
+  .page-title{font-family:'Syne',sans-serif;font-weight:700;font-size:clamp(28px,3.5vw,48px);line-height:1.15;color:#1A2B5E;margin-bottom:14px;max-width:560px;}
+  .page-sub{font-size:16px;font-weight:300;color:#6b7280;line-height:1.7;max-width:500px;}
+
+  main{padding:80px 0;}
+
+  .about-grid{display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:start;margin-bottom:80px;}
+  .about-title{font-family:'Syne',sans-serif;font-size:clamp(22px,2.5vw,36px);font-weight:700;color:#1A2B5E;margin-bottom:20px;line-height:1.25;}
+  .about-body{font-size:16px;font-weight:300;color:#6b7280;line-height:1.85;}
+  .about-body p{margin-bottom:16px;}
+  .about-body p:last-child{margin-bottom:0;}
+
+  .divider{border:none;border-top:1px solid #e5e7eb;margin:80px 0;}
+
+  .values-section{margin-bottom:80px;}
+  .sec-title{font-family:'Syne',sans-serif;font-weight:700;font-size:clamp(24px,2.8vw,40px);line-height:1.15;color:#1A2B5E;margin-bottom:16px;}
+  .sec-sub{font-size:16px;font-weight:300;color:#9ca3af;line-height:1.75;max-width:500px;margin-bottom:52px;}
+
+  .values-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:2px;}
+  .value{padding:40px 36px;border:1px solid #e5e7eb;background:#fff;}
+  .value-num{font-family:'Syne',sans-serif;font-size:40px;font-weight:800;color:rgba(0,196,180,.15);line-height:1;margin-bottom:16px;}
+  .value-title{font-family:'Syne',sans-serif;font-size:17px;font-weight:700;color:#1A2B5E;margin-bottom:10px;}
+  .value-desc{font-size:14px;font-weight:300;color:#9ca3af;line-height:1.75;}
+
+  .cta-strip{background:#1A2B5E;border-radius:16px;padding:56px;display:flex;justify-content:space-between;align-items:center;gap:32px;flex-wrap:wrap;}
+  .cta-strip-title{font-family:'Syne',sans-serif;font-size:26px;font-weight:700;color:#fff;margin-bottom:8px;}
+  .cta-strip-sub{font-size:15px;color:rgba(255,255,255,.5);}
+
+  @media(max-width:900px){
+    .page-hero{padding:56px 0;}
+    main{padding:56px 0;}
+    .about-grid{grid-template-columns:1fr;gap:40px;}
+    .values-grid{grid-template-columns:1fr;}
+    .cta-strip{padding:36px 24px;}
+    .divider{margin:48px 0;}
+  }
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="nav-inner">
+    <a href="index.html" class="nav-logo">
+      <svg viewBox="0 0 34 34" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <polygon points="8.5,0 25.5,0 34,17 25.5,34 8.5,34 0,17" fill="#1A2B5E"/>
+        <polygon points="17,0 25.5,0 34,17 25.5,34 17,34" fill="#00C4B4"/>
+        <line x1="17" y1="0" x2="17" y2="34" stroke="white" stroke-width="1.5"/>
+        <polygon points="6,17 17,6 17,28" fill="white"/>
+      </svg>
+      <div class="nav-brand">
+        <span class="nav-brand-name">CELERION</span>
+        <span class="nav-brand-sub">HEALTH</span>
+      </div>
+    </a>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="products.html">Products</a></li>
+      <li><a href="about.html" class="active">About</a></li>
+      <li><a href="contact.html" class="nav-cta">Contact</a></li>
+    </ul>
+  </div>
+</nav>
+
+<div class="page-hero">
+  <div class="container">
+    <p class="eyebrow">About us</p>
+    <h1 class="page-title">Building AI for the people who keep people alive</h1>
+    <p class="page-sub">Celerion Health is an AI company on a mission to improve clinical decision making across India.</p>
+  </div>
+</div>
+
+<main>
+  <div class="container">
+
+    <div class="about-grid">
+      <div>
+        <h2 class="about-title">Who we are</h2>
+        <div class="about-body">
+          <p>Celerion Health is an AI health company building clinical decision support tools for doctors, nurses and emergency healthcare teams across India.</p>
+          <p>We believe that better information leads to better decisions — and better decisions save lives. Our tools are designed to work alongside clinicians, providing structured, evidence-based support at the point of care.</p>
+          <p>We are at the early stage of building a broader platform of AI tools, each addressing a specific clinical workflow. Our first product focuses on emergency triage support, with more tools in development.</p>
+        </div>
+      </div>
+      <div>
+        <h2 class="about-title">Why India</h2>
+        <div class="about-body">
+          <p>India's healthcare system faces unique challenges — high patient volumes, diverse disease patterns including tropical and endemic conditions, and varying levels of resource availability across regions.</p>
+          <p>Generic AI tools built for Western healthcare systems don't account for India's disease landscape. We build tools that understand the local context — from dengue and malaria to the high prevalence of diabetes and hypertension.</p>
+          <p>Our tools are built to work in real Indian emergency departments — fast, offline-resilient and designed for the actual pressures of the job.</p>
+        </div>
+      </div>
+    </div>
+
+    <hr class="divider">
+
+    <div class="values-section">
+      <p class="eyebrow">What we believe</p>
+      <h2 class="sec-title">Our principles</h2>
+      <p class="sec-sub">Four principles guide every product decision we make.</p>
+      <div class="values-grid">
+        <div class="value"><div class="value-num">01</div><div class="value-title">AI assists, clinicians decide</div><p class="value-desc">Our tools reduce cognitive load and support better judgement. The final decision always belongs to the care team. We will never position our tools as a replacement for clinical expertise.</p></div>
+        <div class="value"><div class="value-num">02</div><div class="value-title">India-first</div><p class="value-desc">Built for the diseases, conditions and healthcare contexts that matter most in India. Not adapted from somewhere else — designed from the ground up for Indian healthcare.</p></div>
+        <div class="value"><div class="value-num">03</div><div class="value-title">Speed without compromise</div><p class="value-desc">Clinical AI is only useful if it keeps up with clinical reality. Our tools are fast by design — minimal inputs, instant structured outputs, built for the floor not the office.</p></div>
+        <div class="value"><div class="value-num">04</div><div class="value-title">Privacy as standard</div><p class="value-desc">Patient data is never an afterthought. All data stays on device. No external servers, no third-party sharing. Security and privacy are built into every product from day one.</p></div>
+      </div>
+    </div>
+
+    <div class="cta-strip">
+      <div>
+        <div class="cta-strip-title">Want to work with us?</div>
+        <div class="cta-strip-sub">We are partnering with hospitals and clinical teams across India.</div>
+      </div>
+      <a href="contact.html" class="btn btn-teal">Get in touch &rarr;</a>
+    </div>
+
+  </div>
+</main>
+
+<footer>
+  <div class="footer-inner">
+    <div class="footer-top">
+      <div>
+        <div class="footer-brand-name">CELERION <span>HEALTH</span></div>
+        <div class="footer-brand-tag">Clinical AI · India · celerion.ai</div>
+      </div>
+      <div class="footer-links">
+        <a href="index.html">Home</a>
+        <a href="products.html">Products</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="footer-disc">Celerion's tools are clinical decision support aids. All outputs are for informational purposes only. Clinical decisions must always be made by qualified medical professionals.</div>
+      <div class="footer-copy">&copy; 2026 Celerion Health</div>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
