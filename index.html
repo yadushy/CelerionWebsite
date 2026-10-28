@@ -4,70 +4,26 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Celerion Health — AI for Clinical Decision Making</title>
-<meta name="description" content="Celerion builds AI tools that help doctors, nurses and emergency healthcare teams make better decisions. Empowering Medicine through Artificial Intelligence Innovations.">
+<meta name="description" content="Celerion builds AI tools for Indian healthcare: emergency triage support for hospitals and Celerion Practice, the AI practice companion for independent doctors.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Syne:wght@700;800&display=swap" rel="stylesheet">
-<style>
-/* Shared styles */
-*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
-html{scroll-behavior:smooth;}
-body{font-family:'Inter',sans-serif;background:#fff;color:#111827;overflow-x:hidden;}
-nav{position:sticky;top:0;z-index:100;background:rgba(255,255,255,0.95);backdrop-filter:blur(12px);border-bottom:1px solid #e5e7eb;padding:0 48px;}
-.nav-inner{max-width:1200px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;height:68px;}
-.nav-logo{display:flex;align-items:center;gap:10px;text-decoration:none;}
-.nav-logo svg{width:32px;height:32px;}
-.nav-brand{display:flex;flex-direction:column;gap:1px;}
-.nav-brand-name{font-size:13px;font-weight:700;letter-spacing:2.5px;color:#1A2B5E;}
-.nav-brand-sub{font-size:7px;font-weight:600;letter-spacing:3px;color:#00C4B4;}
-.nav-links{display:flex;align-items:center;gap:32px;list-style:none;}
-.nav-links a{font-size:14px;color:#6b7280;text-decoration:none;transition:color .2s;}
-.nav-links a:hover{color:#111827;}
-.nav-links a.active{color:#1A2B5E;font-weight:500;}
-.nav-cta{background:#1A2B5E!important;color:#fff!important;font-weight:600!important;padding:10px 22px!important;border-radius:8px;transition:background .2s!important;}
-.nav-cta:hover{background:#142248!important;}
-footer{background:#1A2B5E;padding:56px 48px 40px;}
-.footer-inner{max-width:1200px;margin:0 auto;}
-.footer-top{display:flex;justify-content:space-between;align-items:flex-start;flex-wrap:wrap;gap:40px;padding-bottom:40px;border-bottom:1px solid rgba(255,255,255,0.08);}
-.footer-brand-name{font-size:14px;font-weight:700;letter-spacing:2.5px;color:#fff;margin-bottom:6px;}
-.footer-brand-name span{color:#00C4B4;}
-.footer-brand-tag{font-size:12px;color:rgba(255,255,255,0.3);}
-.footer-links{display:flex;gap:28px;flex-wrap:wrap;}
-.footer-links a{font-size:13px;color:rgba(255,255,255,0.5);text-decoration:none;transition:color .2s;}
-.footer-links a:hover{color:#fff;}
-.footer-bottom{display:flex;justify-content:space-between;align-items:center;padding-top:28px;flex-wrap:wrap;gap:16px;}
-.footer-disc{font-size:11px;color:rgba(255,255,255,0.2);font-style:italic;max-width:520px;line-height:1.65;}
-.footer-copy{font-size:12px;color:rgba(255,255,255,0.22);}
-.btn{display:inline-flex;align-items:center;gap:8px;background:#1A2B5E;color:#fff;font-size:14px;font-weight:600;padding:14px 28px;border-radius:10px;text-decoration:none;transition:background .2s,transform .2s;letter-spacing:0.02em;}
-.btn:hover{background:#142248;transform:translateY(-1px);}
-.btn-teal{background:#00C4B4;}
-.btn-teal:hover{background:#00A99C;}
-.btn-outline{background:transparent;color:#1A2B5E;border:1.5px solid #1A2B5E;}
-.btn-outline:hover{background:#1A2B5E;color:#fff;transform:translateY(-1px);}
-.eyebrow{font-size:11px;font-weight:600;letter-spacing:3px;color:#00C4B4;text-transform:uppercase;margin-bottom:16px;}
-.container{max-width:1200px;margin:0 auto;padding:0 48px;}
-@media(max-width:900px){
-  nav{padding:0 20px;}
-  .nav-links{display:none;}
-  footer{padding:40px 20px;}
-  .container{padding:0 20px;}
-  .footer-top{flex-direction:column;gap:24px;}
-}
-</style>
+<link rel="stylesheet" href="shared.css">
 <style>
   body::before{content:'';position:fixed;inset:0;background-image:linear-gradient(rgba(0,196,180,.03) 1px,transparent 1px),linear-gradient(90deg,rgba(0,196,180,.03) 1px,transparent 1px);background-size:64px 64px;pointer-events:none;z-index:0;}
 
   /* HERO */
-  #hero{display:grid;grid-template-columns:1fr 1fr;min-height:calc(100vh - 68px);position:relative;z-index:1;}
-  .hero-text{display:flex;flex-direction:column;justify-content:center;padding:80px 60px 80px 80px;}
-  .hero-title{font-size:clamp(30px,3.2vw,50px);font-weight:700;color:#1A2B5E;line-height:1.15;letter-spacing:-.01em;margin-bottom:20px;}
-  .hero-tagline{font-size:15px;color:#6b7280;margin-bottom:36px;line-height:1.6;}
-  .hero-buttons{display:flex;gap:14px;flex-wrap:wrap;}
-  .btn-hero-solid{display:inline-flex;align-items:center;background:#00C4B4;color:#fff;font-size:14px;font-weight:600;padding:13px 28px;border-radius:100px;text-decoration:none;transition:background .2s;}
-  .btn-hero-solid:hover{background:#00A99C;}
-  .btn-hero-outline{display:inline-flex;align-items:center;background:transparent;color:#1A2B5E;font-size:14px;font-weight:500;padding:12px 26px;border-radius:100px;border:1.5px solid #1A2B5E;text-decoration:none;transition:all .2s;}
-  .btn-hero-outline:hover{background:#1A2B5E;color:#fff;}
-  .hero-image{overflow:hidden;}
-  .hero-image img{width:100%;height:100%;object-fit:cover;object-position:center top;}
+  #hero{position:relative;min-height:100vh;display:flex;align-items:center;padding:80px 0;z-index:1;overflow:hidden;}
+  .hero-glow{position:absolute;top:10%;right:-5%;width:600px;height:600px;background:radial-gradient(circle,rgba(0,196,180,.08) 0%,transparent 65%);pointer-events:none;}
+  .hero-content{max-width:680px;}
+  .hero-badge{display:inline-flex;align-items:center;gap:8px;background:rgba(0,196,180,.07);border:1px solid rgba(0,196,180,.2);border-radius:100px;padding:7px 16px;font-size:12px;font-weight:500;color:#00C4B4;letter-spacing:.04em;margin-bottom:36px;}
+  .badge-dot{width:6px;height:6px;background:#00C4B4;border-radius:50%;animation:blink 2s ease-in-out infinite;}
+  .hero-title{font-family:'Syne',sans-serif;font-weight:800;font-size:clamp(42px,5vw,76px);line-height:1.06;letter-spacing:-.02em;color:#1A2B5E;margin-bottom:12px;}
+  .hero-title .accent{color:#00C4B4;}
+  .hero-tagline{font-size:15px;font-weight:500;color:#00C4B4;letter-spacing:.04em;margin-bottom:24px;}
+  .hero-sub{font-size:18px;font-weight:300;color:#6b7280;line-height:1.75;max-width:540px;margin-bottom:48px;}
+  .hero-actions{display:flex;gap:16px;flex-wrap:wrap;align-items:center;}
+  .hero-mark{position:absolute;right:4%;top:50%;transform:translateY(-50%);opacity:.04;pointer-events:none;}
+  .hero-mark svg{width:480px;height:480px;}
 
   /* MISSION */
   #mission{position:relative;z-index:1;background:#F4F8FC;border-top:1px solid #e5e7eb;border-bottom:1px solid #e5e7eb;padding:100px 0;}
@@ -124,9 +80,8 @@ footer{background:#1A2B5E;padding:56px 48px 40px;}
   @keyframes blink{0%,100%{opacity:1;transform:scale(1);}50%{opacity:.4;transform:scale(.8);}}
 
   @media(max-width:900px){
-    #hero{grid-template-columns:1fr;min-height:auto;}
-    .hero-text{padding:56px 20px;}
-    .hero-image{min-height:320px;}
+    #hero{padding:60px 0;min-height:auto;}
+    .hero-mark{display:none;}
     #mission,#platform,#products,#values,#cta{padding:64px 0;}
     .pillars{grid-template-columns:1fr;}
     .products-grid{grid-template-columns:1fr;}
@@ -162,16 +117,26 @@ footer{background:#1A2B5E;padding:56px 48px 40px;}
 </nav>
 
 <section id="hero">
-  <div class="hero-text">
-    <h1 class="hero-title">Discover Next-Generation Healthcare Technology with Celerion Health</h1>
-    <p class="hero-tagline">Empowering Medicine through Artificial Intelligence Innovations</p>
-    <div class="hero-buttons">
-      <a href="about.html" class="btn-hero-solid">Learn More</a>
-      <a href="contact.html" class="btn-hero-outline">Join Our Mailing List</a>
+  <div class="hero-glow"></div>
+  <div class="container">
+    <div class="hero-content">
+      <div class="hero-badge"><span class="badge-dot"></span>Clinical AI · Built for India</div>
+      <h1 class="hero-title">Discover Next-Generation<br>Healthcare Technology<br><span class="accent">with Celerion.</span></h1>
+      <p class="hero-tagline">Empowering Medicine through Artificial Intelligence Innovations</p>
+      <p class="hero-sub">AI tools that help doctors, nurses and emergency healthcare teams make better decisions, reduce errors and improve patient outcomes.</p>
+      <div class="hero-actions">
+        <a href="products.html" class="btn btn-teal">Explore products &rarr;</a>
+        <a href="contact.html" class="btn btn-outline">Get in touch</a>
+      </div>
     </div>
   </div>
-  <div class="hero-image">
-    <img src="hero.webp" alt="Healthcare professional">
+  <div class="hero-mark">
+    <svg viewBox="0 0 480 480" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <polygon points="120,0 360,0 480,240 360,480 120,480 0,240" fill="#1A2B5E"/>
+      <polygon points="240,0 360,0 480,240 360,480 240,480" fill="#00C4B4"/>
+      <line x1="240" y1="0" x2="240" y2="480" stroke="white" stroke-width="5"/>
+      <polygon points="86,240 240,86 240,394" fill="white"/>
+    </svg>
   </div>
 </section>
 
@@ -191,7 +156,7 @@ footer{background:#1A2B5E;padding:56px 48px 40px;}
     <div class="pillars">
       <div class="pillar"><div class="pillar-bar"></div><span class="pillar-num">01</span><div class="pillar-title">Clinical intelligence</div><p class="pillar-desc">AI that understands clinical context — disease patterns, urgency and risk — tailored to the realities of Indian healthcare.</p></div>
       <div class="pillar"><div class="pillar-bar"></div><span class="pillar-num">02</span><div class="pillar-title">Designed for speed</div><p class="pillar-desc">Minimal inputs, instant outputs. Built for nurses, doctors and support staff on the floor — not administrators at a desk.</p></div>
-      <div class="pillar"><div class="pillar-bar"></div><span class="pillar-num">03</span><div class="pillar-title">Secure by default</div><p class="pillar-desc">Patient data stays on device. No external storage. Security and privacy built into every product from day one.</p></div>
+      <div class="pillar"><div class="pillar-bar"></div><span class="pillar-num">03</span><div class="pillar-title">Secure by default</div><p class="pillar-desc">Every doctor's records are isolated and encrypted — in transit and at rest. Never shared, never sold, never used for advertising.</p></div>
     </div>
   </div>
 </section>
@@ -209,10 +174,12 @@ footer{background:#1A2B5E;padding:56px 48px 40px;}
         <br>
         <a href="products.html" class="btn" style="margin-top:8px;">Learn more &rarr;</a>
       </div>
-      <div class="prod-card dim">
-        <div class="prod-tag soon">Coming soon</div>
-        <div class="prod-title">Clinical Decision Support Suite</div>
-        <p class="prod-desc">A broader suite of CDS tools across multiple specialties and clinical settings. Get in touch to be notified when new products launch.</p>
+      <div class="prod-card">
+        <div class="prod-tag">Early access · Live</div>
+        <div class="prod-title">Celerion Practice</div>
+        <p class="prod-desc">The AI practice companion for independent doctors. Talk through the visit — get a structured note, a safety-checked prescription delivered to the patient on WhatsApp, and the full history at a glance.</p>
+        <br>
+        <a href="products.html" class="btn" style="margin-top:8px;">Learn more &rarr;</a>
       </div>
     </div>
   </div>
@@ -257,6 +224,7 @@ footer{background:#1A2B5E;padding:56px 48px 40px;}
         <a href="products.html">Products</a>
         <a href="about.html">About</a>
         <a href="contact.html">Contact</a>
+        <a href="privacy.html">Privacy</a>
       </div>
     </div>
     <div class="footer-bottom">
