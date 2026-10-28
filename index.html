@@ -14,7 +14,8 @@
   /* HERO */
   #hero{position:relative;min-height:100vh;display:flex;align-items:center;padding:80px 0;z-index:1;overflow:hidden;}
   .hero-glow{position:absolute;top:10%;right:-5%;width:600px;height:600px;background:radial-gradient(circle,rgba(0,196,180,.08) 0%,transparent 65%);pointer-events:none;}
-  .hero-content{max-width:680px;}
+  .hero-row{display:flex;align-items:center;justify-content:space-between;gap:56px;}
+  .hero-content{flex:1 1 0;max-width:640px;}
   .hero-badge{display:inline-flex;align-items:center;gap:8px;background:rgba(0,196,180,.07);border:1px solid rgba(0,196,180,.2);border-radius:100px;padding:7px 16px;font-size:12px;font-weight:500;color:#00C4B4;letter-spacing:.04em;margin-bottom:36px;}
   .badge-dot{width:6px;height:6px;background:#00C4B4;border-radius:50%;animation:blink 2s ease-in-out infinite;}
   .hero-title{font-family:'Syne',sans-serif;font-weight:800;font-size:clamp(42px,5vw,76px);line-height:1.06;letter-spacing:-.02em;color:#1A2B5E;margin-bottom:12px;}
@@ -22,9 +23,9 @@
   .hero-tagline{font-size:15px;font-weight:500;color:#00C4B4;letter-spacing:.04em;margin-bottom:24px;}
   .hero-sub{font-size:18px;font-weight:300;color:#6b7280;line-height:1.75;max-width:540px;margin-bottom:48px;}
   .hero-actions{display:flex;gap:16px;flex-wrap:wrap;align-items:center;}
-  .hero-photo{position:absolute;right:4%;top:50%;transform:translateY(-50%);width:min(36vw,440px);border-radius:20px;overflow:hidden;box-shadow:0 24px 64px rgba(26,43,94,.18);border:1px solid #e5e7eb;}
+  .hero-photo{flex:0 0 auto;width:clamp(280px,32vw,420px);border-radius:20px;overflow:hidden;box-shadow:0 24px 64px rgba(26,43,94,.18);border:1px solid #e5e7eb;}
   .hero-photo img{display:block;width:100%;height:auto;}
-  @media(max-width:1100px){.hero-photo{display:none;}}
+  @media(max-width:1000px){.hero-photo{display:none;}}
 
   /* MISSION */
   #mission{position:relative;z-index:1;background:#F4F8FC;border-top:1px solid #e5e7eb;border-bottom:1px solid #e5e7eb;padding:100px 0;}
@@ -120,6 +121,7 @@
 <section id="hero">
   <div class="hero-glow"></div>
   <div class="container">
+    <div class="hero-row">
     <div class="hero-content">
       <div class="hero-badge"><span class="badge-dot"></span>Clinical AI · Built for India</div>
       <h1 class="hero-title">Discover Next-Generation<br>Healthcare Technology<br><span class="accent">with Celerion.</span></h1>
@@ -130,9 +132,10 @@
         <a href="contact.html" class="btn btn-outline">Get in touch</a>
       </div>
     </div>
-  </div>
-  <div class="hero-photo">
-    <img src="hero.webp" alt="Clinician using Celerion" onerror="this.parentElement.style.display='none'">
+    <div class="hero-photo">
+      <img src="hero.webp" alt="Clinician using Celerion" onerror="this.style.display='none'">
+    </div>
+    </div>
   </div>
 </section>
 
@@ -152,7 +155,7 @@
     <div class="pillars">
       <div class="pillar"><div class="pillar-bar"></div><span class="pillar-num">01</span><div class="pillar-title">Clinical intelligence</div><p class="pillar-desc">AI that understands clinical context — disease patterns, urgency and risk — tailored to the realities of Indian healthcare.</p></div>
       <div class="pillar"><div class="pillar-bar"></div><span class="pillar-num">02</span><div class="pillar-title">Designed for speed</div><p class="pillar-desc">Minimal inputs, instant outputs. Built for nurses, doctors and support staff on the floor — not administrators at a desk.</p></div>
-      <div class="pillar"><div class="pillar-bar"></div><span class="pillar-num">03</span><div class="pillar-title">Secure by default</div><p class="pillar-desc">Every doctor's records are isolated and encrypted — in transit and at rest. Never shared, never sold, never used for advertising.</p></div>
+      <div class="pillar"><div class="pillar-bar"></div><span class="pillar-num">03</span><div class="pillar-title">Secure by default</div><p class="pillar-desc">Every doctor's records are encrypted in transit and at rest, with strict per-doctor isolation. Access always stays in the doctor's control.</p></div>
     </div>
   </div>
 </section>
@@ -173,7 +176,7 @@
       <div class="prod-card">
         <div class="prod-tag">Early access · Live</div>
         <div class="prod-title">Celerion Desk</div>
-        <p class="prod-desc">The AI practice companion for independent doctors. Talk through the visit — get a structured note, a safety-checked prescription delivered to the patient on WhatsApp, and the full history at a glance.</p>
+        <p class="prod-desc">Your own personal EHR. Talk through the visit — Desk writes the structured note and the safety-checked prescription, keeps every patient's complete history, and briefs you before they walk in.</p>
         <br>
         <a href="products.html" class="btn" style="margin-top:8px;">Learn more &rarr;</a>
       </div>
@@ -189,7 +192,7 @@
       <div class="value"><div class="value-num">01</div><div class="value-title">AI assists, clinicians decide</div><p class="value-desc">Our tools reduce cognitive load and support better judgement. The final decision always belongs to the care team.</p></div>
       <div class="value"><div class="value-num">02</div><div class="value-title">India-first</div><p class="value-desc">Built for the diseases, conditions and healthcare contexts that matter most in India.</p></div>
       <div class="value"><div class="value-num">03</div><div class="value-title">Speed without compromise</div><p class="value-desc">Clinical AI is only useful if it keeps up with clinical reality. Our tools are fast by design.</p></div>
-      <div class="value"><div class="value-num">04</div><div class="value-title">Privacy as standard</div><p class="value-desc">Patient data is never an afterthought. Privacy is built into every product from day one.</p></div>
+      <div class="value"><div class="value-num">04</div><div class="value-title">Privacy as standard</div><p class="value-desc">Records are encrypted and isolated per doctor. We may use de-identified, aggregated data — stripped of anything that can identify a patient — to improve our products and support health research. Identifiable patient data is never sold or used for advertising.</p></div>
     </div>
   </div>
 </section>
