@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pay your clinic — Celerion Health</title>
+<meta name="robots" content="noindex">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:'Inter',sans-serif;background:#F4F8FC;color:#111827;min-height:100vh;
+     display:flex;flex-direction:column;align-items:center;justify-content:center;padding:24px;}
+.card{background:#fff;border:1px solid #e5e7eb;border-radius:20px;padding:36px 28px;max-width:420px;width:100%;text-align:center;}
+.brand{display:flex;align-items:center;justify-content:center;gap:10px;margin-bottom:26px;}
+.brand span{font-size:13px;font-weight:700;letter-spacing:2.5px;color:#1A2B5E;}
+.to{font-size:14px;color:#6b7280;margin-bottom:6px;}
+.payee{font-size:20px;font-weight:700;color:#1A2B5E;margin-bottom:2px;}
+.vpa{font-size:13px;color:#9ca3af;margin-bottom:22px;word-break:break-all;}
+.amount{font-size:44px;font-weight:800;color:#1A2B5E;margin-bottom:6px;}
+.note{font-size:13px;color:#6b7280;margin-bottom:26px;}
+.btn{display:block;width:100%;background:#00C4B4;color:#fff;border:none;border-radius:12px;
+     padding:16px;font-family:'Inter',sans-serif;font-weight:700;font-size:16px;cursor:pointer;text-decoration:none;}
+.btn:active{background:#00A99C;}
+.hint{font-size:12px;color:#9ca3af;margin-top:16px;line-height:1.6;}
+.err{font-size:14px;color:#b45309;line-height:1.7;}
+.foot{margin-top:22px;font-size:11px;color:#9ca3af;}
+</style>
+</head>
+<body>
+<div class="card">
+  <div class="brand">
+    <svg width="26" height="26" viewBox="0 0 34 34" xmlns="http://www.w3.org/2000/svg">
+      <polygon points="8.5,0 25.5,0 34,17 25.5,34 8.5,34 0,17" fill="#1A2B5E"/>
+      <polygon points="17,0 25.5,0 34,17 25.5,34 17,34" fill="#00C4B4"/>
+      <line x1="17" y1="0" x2="17" y2="34" stroke="white" stroke-width="1.5"/>
+      <polygon points="6,17 17,6 17,28" fill="white"/>
+    </svg>
+    <span>CELERION HEALTH</span>
+  </div>
+  <div id="content"></div>
+  <div class="foot">This page only opens your UPI app — Celerion never sees or handles the payment.</div>
+</div>
+<script>
+(function(){
+  const q = new URLSearchParams(location.search);
+  const pa = (q.get('pa')||'').trim();
+  const pn = (q.get('pn')||'Your clinic').trim();
+  const am = (q.get('am')||'').trim();
+  const tn = (q.get('tn')||'Consultation').trim();
+  const box = document.getElementById('content');
+  const okVpa = /^[a-zA-Z0-9.\-_]{2,}@[a-zA-Z]{2,}$/.test(pa);
+  const okAmt = /^\d+(\.\d{1,2})?$/.test(am) && parseFloat(am) > 0 && parseFloat(am) <= 100000;
+  if (!okVpa || !okAmt) {
+    box.innerHTML = '<p class="err">This payment link is incomplete. Please ask the clinic to send it again.</p>';
+    return;
+  }
+  const esc = s => s.replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+  const upi = 'upi://pay?pa=' + encodeURIComponent(pa) + '&pn=' + encodeURIComponent(pn)
+            + '&am=' + encodeURIComponent(am) + '&cu=INR&tn=' + encodeURIComponent(tn.slice(0,40));
+  box.innerHTML =
+    '<div class="to">Paying</div>' +
+    '<div class="payee">' + esc(pn) + '</div>' +
+    '<div class="vpa">' + esc(pa) + '</div>' +
+    '<div class="amount">&#8377;' + esc(am) + '</div>' +
+    '<div class="note">' + esc(tn) + '</div>' +
+    '<a class="btn" href="' + upi + '">Pay with any UPI app</a>' +
+    '<div class="hint">Opens GPay, PhonePe, Paytm or any UPI app with the amount filled in.<br>' +
+    'After paying, your clinic marks the bill as paid.</div>';
+})();
+</script>
+</body>
+</html>
