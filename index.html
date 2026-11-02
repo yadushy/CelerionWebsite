@@ -14,18 +14,19 @@
   /* HERO */
   #hero{position:relative;min-height:100vh;display:flex;align-items:center;padding:80px 0;z-index:1;overflow:hidden;}
   .hero-glow{position:absolute;top:10%;right:-5%;width:600px;height:600px;background:radial-gradient(circle,rgba(0,196,180,.08) 0%,transparent 65%);pointer-events:none;}
-  .hero-row{display:flex;align-items:center;justify-content:space-between;gap:56px;}
-  .hero-content{flex:1 1 0;max-width:640px;}
-  .hero-badge{display:inline-flex;align-items:center;gap:8px;background:rgba(0,196,180,.07);border:1px solid rgba(0,196,180,.2);border-radius:100px;padding:7px 16px;font-size:12px;font-weight:500;color:#00C4B4;letter-spacing:.04em;margin-bottom:36px;}
+  .hero-row{display:grid;grid-template-columns:minmax(0,1.15fr) minmax(0,1fr);align-items:center;gap:72px;}
+  .hero-content{min-width:0;}
+  .hero-badge{display:inline-flex;align-items:center;gap:8px;background:rgba(0,196,180,.07);border:1px solid rgba(0,196,180,.2);border-radius:100px;padding:7px 16px;font-size:12px;font-weight:500;color:#00C4B4;letter-spacing:.04em;margin-bottom:28px;}
   .badge-dot{width:6px;height:6px;background:#00C4B4;border-radius:50%;animation:blink 2s ease-in-out infinite;}
-  .hero-title{font-family:'Syne',sans-serif;font-weight:800;font-size:clamp(42px,5vw,76px);line-height:1.06;letter-spacing:-.02em;color:#1A2B5E;margin-bottom:12px;}
+  .hero-title{font-family:'Syne',sans-serif;font-weight:700;font-size:clamp(34px,3.5vw,52px);line-height:1.12;letter-spacing:-.015em;color:#1A2B5E;margin-bottom:20px;text-wrap:balance;}
   .hero-title .accent{color:#00C4B4;}
-  .hero-tagline{font-size:15px;font-weight:500;color:#00C4B4;letter-spacing:.04em;margin-bottom:24px;}
-  .hero-sub{font-size:18px;font-weight:300;color:#6b7280;line-height:1.75;max-width:540px;margin-bottom:48px;}
+  .hero-title .nowrap{white-space:nowrap;}
+  .hero-tagline{font-size:15px;font-weight:500;color:#00C4B4;letter-spacing:.04em;margin-bottom:16px;}
+  .hero-sub{font-size:18px;font-weight:300;color:#6b7280;line-height:1.7;max-width:520px;margin-bottom:36px;}
   .hero-actions{display:flex;gap:16px;flex-wrap:wrap;align-items:center;}
-  .hero-photo{flex:0 0 auto;width:clamp(280px,32vw,420px);border-radius:20px;overflow:hidden;box-shadow:0 24px 64px rgba(26,43,94,.18);border:1px solid #e5e7eb;}
-  .hero-photo img{display:block;width:100%;height:auto;}
-  @media(max-width:1000px){.hero-photo{display:none;}}
+  .hero-photo{width:100%;max-width:460px;justify-self:end;aspect-ratio:4/5;border-radius:20px;overflow:hidden;box-shadow:0 24px 64px rgba(26,43,94,.18);border:1px solid #e5e7eb;}
+  .hero-photo img{display:block;width:100%;height:100%;object-fit:cover;object-position:center 35%;}
+  @media(max-width:1000px){.hero-row{grid-template-columns:1fr;}.hero-photo{display:none;}}
 
   /* MISSION */
   #mission{position:relative;z-index:1;background:#F4F8FC;border-top:1px solid #e5e7eb;border-bottom:1px solid #e5e7eb;padding:100px 0;}
@@ -124,7 +125,7 @@
     <div class="hero-row">
     <div class="hero-content">
       <div class="hero-badge"><span class="badge-dot"></span>Clinical AI · Built for India</div>
-      <h1 class="hero-title">Discover Next-Generation<br>Healthcare Technology<br><span class="accent">with Celerion.</span></h1>
+      <h1 class="hero-title">Discover <span class="nowrap">next-generation</span> healthcare technology <span class="accent">with&nbsp;Celerion.</span></h1>
       <p class="hero-tagline">Empowering Medicine through Artificial Intelligence Innovations</p>
       <p class="hero-sub">AI tools that help doctors, nurses and emergency healthcare teams make better decisions, reduce errors and improve patient outcomes.</p>
       <div class="hero-actions">
