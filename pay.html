@@ -21,6 +21,9 @@ body{font-family:'Inter',sans-serif;background:#F4F8FC;color:#111827;min-height:
 .btn{display:block;width:100%;background:#00C4B4;color:#fff;border:none;border-radius:12px;
      padding:16px;font-family:'Inter',sans-serif;font-weight:700;font-size:16px;cursor:pointer;text-decoration:none;}
 .btn:active{background:#00A99C;}
+.btn.alt{background:#1A2B5E;margin-top:10px;}
+.btn.alt:active{background:#142248;}
+.btn.plain{background:#fff;color:#1A2B5E;border:1.5px solid #d1dde8;margin-top:10px;}
 .hint{font-size:12px;color:#9ca3af;margin-top:16px;line-height:1.6;}
 .err{font-size:14px;color:#b45309;line-height:1.7;}
 .foot{margin-top:22px;font-size:11px;color:#9ca3af;}
@@ -55,16 +58,21 @@ body{font-family:'Inter',sans-serif;background:#F4F8FC;color:#111827;min-height:
     return;
   }
   const esc = s => s.replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
-  const upi = 'upi://pay?pa=' + encodeURIComponent(pa) + '&pn=' + encodeURIComponent(pn)
-            + '&am=' + encodeURIComponent(am) + '&cu=INR&tn=' + encodeURIComponent(tn.slice(0,40));
+  const q = 'pa=' + encodeURIComponent(pa) + '&pn=' + encodeURIComponent(pn)
+          + '&am=' + encodeURIComponent(am) + '&cu=INR&tn=' + encodeURIComponent(tn.slice(0,40));
+  // iPhones have no chooser for upi:// — whichever app registered the scheme wins.
+  // So each app gets its own direct link, plus a generic fallback.
   box.innerHTML =
     '<div class="to">Paying</div>' +
     '<div class="payee">' + esc(pn) + '</div>' +
     '<div class="vpa">' + esc(pa) + '</div>' +
     '<div class="amount">&#8377;' + esc(am) + '</div>' +
     '<div class="note">' + esc(tn) + '</div>' +
-    '<a class="btn" href="' + upi + '">Pay with any UPI app</a>' +
-    '<div class="hint">Opens GPay, PhonePe, Paytm or any UPI app with the amount filled in.<br>' +
+    '<a class="btn" href="gpay://upi/pay?' + q + '">Pay with Google Pay</a>' +
+    '<a class="btn alt" href="phonepe://pay?' + q + '">Pay with PhonePe</a>' +
+    '<a class="btn alt" href="paytmmp://pay?' + q + '">Pay with Paytm</a>' +
+    '<a class="btn plain" href="upi://pay?' + q + '">Any other UPI app</a>' +
+    '<div class="hint">The amount is filled in automatically.<br>' +
     'After paying, your clinic marks the bill as paid.</div>';
 })();
 </script>
